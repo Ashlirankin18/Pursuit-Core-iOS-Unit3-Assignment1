@@ -10,7 +10,6 @@ import Foundation
 
 class ApiDecoder{
 static func UserApiData() -> [UserAttributes] {
-//    var results = [UserAttributes]
         guard let path = Bundle.main.path(forResource: "userinfo", ofType: "json") else {fatalError()}
     let userUrl = URL(fileURLWithPath: path)
         if let data = try? Data.init(contentsOf: userUrl) {
@@ -34,7 +33,6 @@ static func stockPath() -> [StockInfo]{
                 print(error)
             }
         }
-    
     return []
 
     }
