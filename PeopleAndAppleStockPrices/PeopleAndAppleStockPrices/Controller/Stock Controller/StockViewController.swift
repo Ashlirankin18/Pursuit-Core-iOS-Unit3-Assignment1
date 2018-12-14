@@ -18,12 +18,20 @@ class StockViewController: UIViewController {
      var stockMatrix = [[StockInfo]]()
     @IBOutlet weak var stockTableView: UITableView!
     
+var sectionNames = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         stockTableView.dataSource = self
         stockTableView.delegate = self
         matrixFactory()
+        fillSectionName()
+    }
+    func stockBySection(section: Int) -> [StockInfo] {
+        return stocks.filter{$0.sectionName == sectionNames[section]}
+    }
+    func fillSectionName() {
+    stocks.forEach{if !sectionNames.contains($0.sectionName){sectionNames.append($0.sectionName)}}
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,12 +41,12 @@ class StockViewController: UIViewController {
     }
    
 
-    func dateConverter(date:String) -> (month:String , year:String){
+    func dateConverter(date:String) -> (month:String , year:String) {
         let dateArray = date.components(separatedBy:"-")
             return (year:dateArray[0],month:dateArray[1])
     }
     
-func matrixFactory(){
+    func matrixFactory(){
     var previousDate = ""
     stockMatrix.append([StockInfo]())
     for stock in stocks {
@@ -55,14 +63,12 @@ func matrixFactory(){
         stockMatrix[startIndex].append(stock)
         previousDate = convertedDate.month + "-" + convertedDate.year
     }
-    print(stockMatrix)
-    
     }
 }
 
 extension StockViewController:UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return stockMatrix[section].count
+        return stockBySection(section: section).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,11 +88,16 @@ extension StockViewController:UITableViewDataSource {
 }
 extension StockViewController:UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return stockMatrix.count
+        return sectionNames.count
   
 }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
+       let thisSection = sectionNames[section]
+        var sum = 0.0
+        let stockInSection = stocks.filter{$0.sectionName == thisSection}
+        stockInSection.forEach{sum += $0.open}
+        let average = sum / Double(stockInSection.count)
+        return thisSection + " " + "Average: $\(String(format: "%.2f", average))"
 }
 
 }

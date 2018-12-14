@@ -22,8 +22,6 @@ class UsersViewController: UIViewController {
     @IBOutlet weak var userSearchBar: UISearchBar!
     @IBOutlet weak var userTableView: UITableView!
     
-
-    
     override func viewDidLoad() {
     super.viewDidLoad()
         userTableView.dataSource = self

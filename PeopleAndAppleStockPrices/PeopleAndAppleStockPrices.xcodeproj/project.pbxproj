@@ -13,7 +13,6 @@
 		2EBCD2A821BF1D75004E1DA0 /* JsonParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBCD2A721BF1D75004E1DA0 /* JsonParsing.swift */; };
 		2EBCD2AC21BF49AC004E1DA0 /* UserDetailledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBCD2AB21BF49AC004E1DA0 /* UserDetailledViewController.swift */; };
 		2EBCD2AE21BF5720004E1DA0 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBCD2AD21BF5720004E1DA0 /* StockViewController.swift */; };
-		2ED9098721C36BBB00F123B7 /* MonthAndYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED9098621C36BBB00F123B7 /* MonthAndYear.swift */; };
 		577E5BEC21BA8BA10083EB97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577E5BEB21BA8BA10083EB97 /* AppDelegate.swift */; };
 		577E5BEE21BA8BA10083EB97 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577E5BED21BA8BA10083EB97 /* UsersViewController.swift */; };
 		577E5BF121BA8BA10083EB97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577E5BEF21BA8BA10083EB97 /* Main.storyboard */; };
@@ -30,7 +29,6 @@
 		2EBCD2A721BF1D75004E1DA0 /* JsonParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParsing.swift; sourceTree = "<group>"; };
 		2EBCD2AB21BF49AC004E1DA0 /* UserDetailledViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailledViewController.swift; sourceTree = "<group>"; };
 		2EBCD2AD21BF5720004E1DA0 /* StockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewController.swift; sourceTree = "<group>"; };
-		2ED9098621C36BBB00F123B7 /* MonthAndYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthAndYear.swift; sourceTree = "<group>"; };
 		577E5BE821BA8BA10083EB97 /* PeopleAndAppleStockPrices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleAndAppleStockPrices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577E5BEB21BA8BA10083EB97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577E5BED21BA8BA10083EB97 /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 				2EBCD2A021BF1B3A004E1DA0 /* UserModel.swift */,
 				2EBCD2A721BF1D75004E1DA0 /* JsonParsing.swift */,
 				2EBCD2A221BF1B44004E1DA0 /* StockModel.swift */,
-				2ED9098621C36BBB00F123B7 /* MonthAndYear.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,7 +223,6 @@
 				2E27A3F721C056E800CF7E3E /* StockDetailledViewController.swift in Sources */,
 				2EBCD2A121BF1B3A004E1DA0 /* UserModel.swift in Sources */,
 				577E5BEC21BA8BA10083EB97 /* AppDelegate.swift in Sources */,
-				2ED9098721C36BBB00F123B7 /* MonthAndYear.swift in Sources */,
 				2EBCD2AE21BF5720004E1DA0 /* StockViewController.swift in Sources */,
 				2EBCD2AC21BF49AC004E1DA0 /* UserDetailledViewController.swift in Sources */,
 			);
